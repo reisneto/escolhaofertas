@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block numoffers %}
+	{% if num_offers and num_offers != -1 %}
+	<div class="notification">
+		<h2> Nós encontramos <em> {{ num_offers }} ofertas </em> para você!</h2>
+	</div>
+	{% endif %}
+{% endblock numoffers %}
+
+
+{% block main_content %}
+		{% if num_offers %}
+		<div id="offers">
+		{% for offer in offers %}
+		<div class="offer">
+				<a class="link-offer" rel="nofollow" onclick="track_master('offers','selected','{{ offer.link }}')" href="{{ offer.link }}" target="_blank">
+				<h1 class="title-offer"> {{ offer.desc|safe }} </h1>
+			</a>
+			<img class="img-offer" src="/offers/images/{{ offer.key().id() }}" alt="Imagem da Oferta"/> 
+			<div class="details-offer"> 
+					<a rel="nofollow" onclick="track_master('offers','selected','{{ offer.link }}')" href="{{ offer.link }}" target="_blank"> Mais Detalhes</a>
+		   	</div>
+			<button class="button" id="share-button"> Compartilhar </button>
+			<span class="span_site_name"> Fonte: <strong>{{ offer.site_name }} </strong></span>
+			<div class="share-panel"></div>
+		</div>
+		{% if num_offers == -1 %}		
+		<a href="/" class="button" style="position:relative;"> Página Principal  </a>
+		{% endif %}
+		{% endfor %}
+		</div>
+		<div id="fix-bug-float" style="clear:both; background-color:#444; width:10px;"></div>
+		{% if num_offers != -1 %}
+		<div id="more-offers" class="button"> Mais Ofertas </div>		
+		{% endif %}
+		{% else %}
+			<div class="notification"> Estamos buscando as ofertas e já já vamos te mostrar =) </div>
+			<div id="fix-bug-float" style="clear:both; background-color:#444; width:10px;"></div>
+		{% endif %}
+
+{% endblock main_content %}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head> 
+	{% block head %}
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="compras coletivas manaus, compras manaus, compras coletivas, oferta manaus, desconto manaus " /> 
+		<meta name="robots" content="index,follow"/>
+		<meta name="revisit-after" content="1 days" />
+		<title> {% block title %} Escolha Ofertas - Reunimos as ofertas de Manaus aqui! {% endblock %}</title>
+		<link type="text/css" rel="stylesheet" href="/static/stylesheets/layoutMinified.css"/>
+		{% endblock head %}
+	</head>
+
+	<body>
+	 	{% block header %}	
+		<div id="header" class="fundo1">
+				<a href="/"><h1 class="title">  Escolha Ofertas  </h1></a> 
+			<h1 class="subtitle"> Reunimos as ofertas de Manaus aqui! </h1>
+			<h3 class="betav">Versão Beta</h3>
+			<div id="sites-offers">
+				<p> Buscamos ofertas nestes sites </p>
+				<ul class="sites-offers-names" >
+					<li> Tambaqui Urbano </li>
+					<li> Groupon </li>
+				</ul>
+				<ul class="sites-offers-names"> 
+					<li>Clikey</li>
+					<li>Boto Maluco</li>
+				</ul>
+				<ul class="sites-offers-name"> 
+					<li> Em Breve Muito Mais! </li>
+				<ul>
+			</div>
+ 		</div>
+		{% endblock header %}
+
+		{% block content %}
+
+		{% block numoffers %}
+		{% endblock numoffers %}
+
+		<div id="content">
+			<div id="side1">
+			{% block side1 %}<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FEscolha-Ofertas%2F276223562486923&amp;width=220&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:400px;" allowTransparency="true"></iframe>
+
+			{% endblock side1 %}
+			</div>
+
+			{% block main_content %}
+			{% endblock main_content %}
+	
+		</div>
+		{% endblock content %}
+		{% block footer %}
+		<div id="footer">
+			<hr />			
+			<div id="useful-links">
+					<a href="/faleconosco"> Fale Conosco </a>
+			</div>
+			<div id="minabout-site">
+				<p> O Escolha Ofertas é um site que reúne todas as ofertas anunciadas nos sites de Compras Coletivas. Visando, primeiramente, dar um serviço de qualidade neste seguimento para a cidade de Manaus. </p>
+			</div>
+			
+		</div>
+			
+		{% endblock footer %}	
+	<script type="text/javascript" src="/static/scripts/jquery.js"> </script>
+	<script type="text/javascript" src="/static/scripts/handlerMinified.js"> </script>
+	<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34176663-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
+	
+	</body>
+</html>

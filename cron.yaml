@@ -1,0 +1,28 @@
+cron:
+- description: Add newer Groupon Offers to DB
+  url: /cron/gpncrawler
+  schedule: every 12 hours from 10:00 to 22:00
+  timezone: America/Manaus
+
+- description: Add newer Clikey Offers to DB
+  url: /cron/clkcrawler
+  schedule: every 12 hours from 10:00 to 22:00
+  timezone: America/Manaus
+
+- description: Add newer Tambaqui Urbano Offers to DB
+  url: /cron/tbqcrawler
+  schedule: every 12 hours from 10:00 to 22:00
+  timezone: America/Manaus
+
+- description: Add newer Boto Maluco Offers to DB
+  url: /cron/btmcrawler
+  schedule: every 12 hours from 10:00 to 22:00
+  timezone: America/Manaus
+
+
+
+#- description: job to make addoffers works
+#  url: /cron/necessary
+#  schedule: every 12 hours from 15:18 to 7:18
+#  timezone: America/Manaus
+

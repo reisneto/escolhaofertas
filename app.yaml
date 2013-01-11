@@ -1,0 +1,63 @@
+application: promocoesmanaus
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /static/stylesheets
+  static_dir: static/stylesheets
+
+- url: /static/scripts
+  static_dir: static/scripts
+
+- url: /static/images
+  static_dir: static/images
+
+- url: /cron/addoffers
+  script: main.app
+  login: admin
+
+- url: /cron/necessary
+  script: main.app
+  
+- url: /cron/tbqcrawler
+  script: main.app
+
+- url: /cron/clkcrawler
+  script: main.app
+
+- url: /cron/gpncrawler
+  script: main.app
+
+- url: /cron/btmcrawler
+  script: main.app
+
+- url: /
+  script: main.app
+
+- url: /faleconosco
+  script: main.app
+
+- url: /page/\d
+  script: main.app
+
+- url: /offers/offer/\d+
+  script: main.app
+
+- url: /offers/images/\d+
+  script: main.app
+
+- url: /.*
+  static_files: static/pages/404.html
+  upload: static/pages/404.html
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+
+- name: jinja2
+  version: "latest"
+
+builtins:
+- remote_api: on

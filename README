@@ -1,0 +1,13 @@
+Promanaus é um agrupador de sites de compras coletivas feito para a cidade de
+Manaus. 
+
+A organização do projeto é django-like.
+
+Principais tecnologias usadas: 
+	Google App Engine
+	webapp2
+	python 2.7
+
+-------- Contato ---------
+
+email: reisneto.alvaro@gmail.com
